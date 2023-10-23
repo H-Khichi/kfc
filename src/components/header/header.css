@@ -1,0 +1,105 @@
+.header{
+    background-color: black;
+    position: fixed ;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+.header1{
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    margin:0px 69px;
+    align-items: center;
+}
+.menu-btn{
+    background-color: #000;
+    height: 50px;
+    border: none;
+    
+    align-items: center;
+}
+.ham{
+    width: 30px;
+    height: 5px;
+    margin-top: 5px;
+    background-color: rgb(255, 255, 255);
+}
+.menu-inner{
+    background-color: #1c1816!important;
+ color: white;
+}
+.ham:nth-child(2){
+    width: 18px;
+}
+.inner-btn{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.menu-inner h5 img{
+margin-right: 5px;
+}
+.pickup-btn{
+    border: 2px solid red;
+    align-items: center;
+    background-color: #1c1816;
+    color: white;
+    margin-left: 20px;
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 7px 24px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.switch{
+    text-align: end;
+}
+.deliver-btn{
+    align-items: center;
+    background-color: #1c1816;
+    color: white;
+    margin-left: 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 7px 24px;
+}
+.pickup-store-name{
+    padding: 6px 54px;
+    margin: 10px;
+    color: white;
+    background-color: #1c1816;
+    border: none;
+}
+.pickup-store-name span h6 ,p{
+    padding: 0;
+    margin: 0;
+    background-color: #1c1816;
+
+}
+.bucket{
+    background: url('../../assets/kfc\ images/bucket.svg');
+    border: none;
+    width: 65px;
+    height: 66px;
+    background-repeat: no-repeat;
+}
+.header2{
+    padding: 20px 20px;
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+}
+.header-2-btn{
+    color: white;
+    background-color: #1c1816;
+    padding: 10px 20px;
+    border:none;
+    border-radius: 5px;
+    margin-left: 10px;
+}

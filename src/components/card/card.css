@@ -1,0 +1,270 @@
+
+#menu-page{
+    background-color: black;
+}
+.menu-title h1{
+    color: white;
+    font-family: var(--theam-font);
+    margin-top: 168px;
+}
+.title-bar{
+    margin-left: 3px;
+    width: 80px;
+    background-color: red;
+    margin-top: 10px;
+    height: 5px;
+}
+.card-wrapper{
+
+    color: white;
+}
+.card-dec{
+    
+    background-color: #1c1816; 
+    padding: 10px;
+    margin: 30px 0px;
+    border-radius: 5px;
+    height: 461px;
+
+}
+
+
+
+.card-dec .card-btn{
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: none;
+    text-align: center;
+    position: relative;
+    margin-left: 60px;
+    bottom: -64px;
+}
+.cart-sec {
+    width: 450px;
+    height: 75%;
+    background-color: #1c1816; 
+    position: fixed;
+    bottom: 0px;
+    right: 70px;
+    color: white;
+   margin-left: 20px;
+}
+#items-count{
+    background-color: #1c1816; 
+    border-bottom: 2px solid red;
+    padding: 20px ;
+}
+.img-p{
+    height: 270px;
+}
+#imghvr:hover{
+    width:105%;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-bottom: 0;
+}
+.dec{
+    width: 15px;
+    height: 20px;
+    background-color: red;
+    margin-left: 10px;
+    display: inline-block;
+    
+}
+#cart-price{
+    background-color: black;
+}
+.cart-price{
+    width: 100%;
+    text-align: end;
+}
+.cart-style{
+    position: absolute;
+    top: 0px; 
+    right: 30px;
+}
+.card-total-price {
+    width: 105%;
+    margin-left:-10px ;
+    height: 70px;
+    background-color: red;
+    position: absolute;
+    bottom: 50px;
+    padding: 5px;
+    display: flex;
+    border-radius: 20px;
+align-items: center;    
+}
+.card-p {
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    background-color: black;
+}
+.cart-set button{
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+.cart-pr{
+    background-color: red;
+   
+}
+.car-price  {
+    background-color: red!important;
+    padding: 20px 20px;
+    margin: 0px;
+}
+
+@media (max-width: 780px){
+    .cart-sec{
+        display: none;
+    }
+}
+
+.card-inner{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    background-color: rgba(255, 255, 255, 0.409);
+    z-index: 999;
+}
+.card-inner-data{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    height: 81vh;
+    background-color: #1c1816;
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 30px;
+    padding: 40px;
+}
+#acc {
+    width: 370px!important;
+    margin: 0;
+    padding: 10px;
+    position: relative;
+    left: 0px;
+    background-color: red;
+    color:white;
+    border-radius: 10px 10px 0 0!important;
+    border: none;
+    margin-top: 10px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: red;
+    color:white;
+    box-shadow: none!important;
+}
+.accordion-body{
+    color: #fff;
+}
+ #drink-wrapper, #addmore {
+        height: 350px;
+        overflow: auto;
+ }
+
+.drink-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.d-img, .a-img{
+    width: 100px;
+    display:flex;
+}
+.d-name , .a-name{
+    display: inline-block;
+    width: 100%;
+    align-items: center;
+}
+
+.d-btn, .a-btn{
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    width: 70px;
+    border-radius: 5px;
+    margin-right: 40px;
+    border: none;
+}
+@media (max-width: 780px){
+    .card-inner{
+        position: absolute;
+        top:0;
+        z-index: 999;
+    }
+    .card-inner-data{
+        margin: 50px 5px;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        padding: 40px;
+    }
+}
+.add-wrapper
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+    }
+.close-card{
+    background-color: red;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+   padding: 15px 5px;
+   cursor: pointer;
+   position: relative;
+   left: 230px;
+}
+.close{
+    background-color: rgb(0, 0, 0);
+    width: 30px;
+    height: 2px;
+    transform: rotate(45deg)
+    
+}
+.close1{
+    background-color: rgb(0, 0, 0);
+    width: 30px;
+    height: 2px;
+    transform:rotate(-45deg)
+}
+.card-inner-2{
+    color: white;
+}
+.inner-dec-btn{
+    background-color: black;
+    border: 1.5px solid red;
+    color: white;
+    margin: 10px;
+    padding: 0px 10px;
+    border-radius: 5px;
+}
+.inner-inc-btn{
+    background-color: black;
+    border: 1.5px solid red;
+    color: white;
+    margin: 10px;
+    padding: 0px 10px;
+    border-radius: 5px;
+}
+.inner-cart-btn{
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: 250px;
+}
