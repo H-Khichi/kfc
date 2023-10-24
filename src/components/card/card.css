@@ -144,6 +144,9 @@ align-items: center;
     border-radius: 30px;
     padding: 40px;
 }
+#radio{
+    color: red;
+}
 #acc {
     width: 370px!important;
     margin: 0;

@@ -8,7 +8,7 @@ import addMore from '../carddata/addmore';
 const Card = () => {
     const [quantity, setQuantity] = useState(0)
     const [addQuantity, setAddQuantity] = useState(1)
-    const [addItem, setAddItem] = useState(0)
+    const [addItem, setAddItem] = useState(1)
     const [totalPrice, setTotalPrice] = useState(0)
     const [innerTotalPrice, setinnerTotalPrice] = useState(0)
     const [addPrice, setAddPrice] = useState(0)
@@ -18,13 +18,11 @@ const Card = () => {
         image: "",
         price: "",
     })
-    const [cState, setCState] = useState({
-        id: "",
-        price: "",
-    })
+    
     const [innerCard, setInnerCard] = useState(false);
     const [innerAddBtn, setInnerAddBtn] = useState(false);
     const [isCartVisible, setCartVisible] = useState(false)
+    const [activeItemIndex, setActiveItemIndex] = useState(null);
     const decrement = (price) => {
         const updateQuantity = quantity - 1;
         const updatedPrice = totalPrice - price;
@@ -60,19 +58,31 @@ const Card = () => {
             console.log("Item not found");
         }
     }
+    const HandleInnerCard = (price,id) => {
+        setAddQuantity(addQuantity )
+        setAddPrice(addPrice+price);
+        setActiveItemIndex(id);
+        
+            setInnerAddBtn(true);
+        
+    }
     const innerDecBtn=(price)=>{
         
-            if (addQuantity <1) {
-                return setInnerAddBtn(false)
+            if (addQuantity <=1) {
+               
+                    setInnerAddBtn(false)
+                    setAddPrice(addPrice-price);
+            
             }
             else {
                 setAddQuantity(addQuantity - 1)
-                setAddPrice(addPrice-price)
+                setAddPrice(addPrice-price);
             }
     }
     const innerIncBtn = (price,id) => {
+        
         setAddQuantity(addQuantity + 1)
-        setAddPrice(addPrice+price)
+        setAddPrice(addPrice+price);
         
     }
     const handleCard = (id,price) => {
@@ -95,20 +105,7 @@ const Card = () => {
     const onHandleClose = () => {
         setInnerCard(false)
     }
-    const HandleInnerCard = (price,id) => {
-        setInnerAddBtn(true);
-        setAddQuantity(addQuantity )
-        setAddPrice(addPrice+price);
-        const innerItem = menu1.find(menuInnerItem => menuInnerItem.id === id);
-        if (innerItem ) {
-       
-            setCState({
-                id: innerItem.id,
-                price: innerItem.price,
-            })
-        }
-        
-    }
+    
     const decItemBtn=(price)=>{
         if(addItem > 1){
             setAddItem(addItem-1)
@@ -228,7 +225,7 @@ const Card = () => {
                                         </button>
                                     </h2>
                                     <div id="flush-collapseOne" className='accordion-collapse collapse' data-bs-parent="#accordionFlushExample">
-                                        <div className='accordion-body text-start' ><input type="radio" /><h5>{cartState.name}</h5></div>
+                                        <div className='accordion-body text-start' ><input type="radio" id='radio' checked="checked"/><span>{cartState.name}</span></div>
                                     </div>
                                 </div>
                                 <div className='accordion-item bg-black ' style={{ border: "none" }}>
@@ -247,17 +244,18 @@ const Card = () => {
 
                                                             </div>
                                                             <div className="d-name text-start">
-                                                                <h6>{d.name}<br /> <h6 id=''>{d.content}</h6></h6>
+                                                                <h6>{d.name}<br /> <h6 >{d.content}</h6></h6>
                                                             </div>
                                                             {!innerAddBtn && <div className="d-button">
-                                                                <button className='d-btn' key={index} onClick={() => HandleInnerCard(d.price,d.id)}>Add</button>
+                                                                <button className='d-btn' key={index} onClick={() => HandleInnerCard(d.price, d.id)}>Add</button>
                                                             </div> }
                                                             
-                                                            {innerAddBtn && <div style={{display:"flex"}}>
+                                                            {innerAddBtn && activeItemIndex === d.id && (<div style={{display:"flex"}}>
                                                                 <button className='inner-dec-btn' onClick={()=>innerDecBtn(d.price)} >-</button>
                                                                 {addQuantity}
                                                                 <button className='inner-inc-btn' onClick={()=>innerIncBtn(d.price,d.id)}>+</button>
                                                             </div>
+                                                            )
                                                             }
 
                                                         </div>
@@ -313,7 +311,6 @@ const Card = () => {
                                 <div className="close1"></div>
                             </div>
                             {
-
                                 <div className="card-inner-2">
                                     <div className="inner-img">
                                         <img src={cartState.image} alt="" width={"80%"} />
@@ -323,11 +320,8 @@ const Card = () => {
                                     <button className='inner-dec-btn' onClick={()=>decItemBtn(cartState.price)}>-</button>
                                     {addItem}
                                     <button className='inner-inc-btn' onClick={()=>incItemBtn(cartState.price)}>+</button><br />
-                                    <button className='inner-cart-btn'><b>Rs:{Number(innerTotalPrice) + Number(cState.price)} </b>    Add to card</button>
-
-
+                                    <button className='inner-cart-btn'><b>Rs:{innerTotalPrice + addPrice } </b>    Add to card</button>
                                 </div>
-
                             }
 
                         </div>

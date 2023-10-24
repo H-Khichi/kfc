@@ -4,6 +4,7 @@
     top: 0;
     width: 100%;
     z-index: 999;
+    align-items: center;
 }
 .header1{
     background-color: #000;
@@ -20,8 +21,8 @@
     align-items: center;
 }
 .ham{
-    width: 30px;
-    height: 5px;
+    width: 24px;
+    height: 3px;
     margin-top: 5px;
     background-color: rgb(255, 255, 255);
 }
@@ -30,7 +31,7 @@
  color: white;
 }
 .ham:nth-child(2){
-    width: 18px;
+    width: 14px;
 }
 .inner-btn{
     background-color: red;

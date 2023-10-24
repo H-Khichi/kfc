@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Drawer, Switch} from 'antd';
+import { Button, Drawer, Switch } from 'antd';
 import './header.css';
 import img1 from '../../assets/kfc images/header-inner.jpg'
 import img2 from '../../assets/kfc images/header-inner-2.jpg'
@@ -46,13 +46,7 @@ const Header = (props) => {
             <a href=""><h5>Mitao Bhook - Scholarship</h5></a>
             <a href=""><h5>Careers</h5></a>
           </Drawer>
-          <div>
-            <button class="pickup-store-name">
-              <span class="d-flex align-items-center">
-                <h6 >Pickup From</h6></span>
-              <p title="Defence">Defence</p>
-            </button>
-          </div>
+          
           <div>
             <button className='bucket'>{props.quantity}</button>
             <button className='inner-btn'>Login</button>
